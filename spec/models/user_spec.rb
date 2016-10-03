@@ -44,8 +44,8 @@ RSpec.describe User, type: :model do
   end
 
   context 'User relationships' do
-    let!(:house_party) {Event.create(name: "Dodgeball Mayhem 2", group_id: aga.id)}
-    let!(:clean_bathroom) {Event.create(name: "clean bathroom", group_id: aga.id)}
+    let!(:house_party) {Event.create(name: "Dodgeball Mayhem 2", category: "social", group_id: aga.id)}
+    let!(:clean_bathroom) {Event.create(name: "clean bathroom", category: "chore", group_id: aga.id)}
     let!(:clean_bathroom_assign) {Assignment.create(user_id: gentian.id, event_id: clean_bathroom.id)}
 
     it 'should belong to a group' do
