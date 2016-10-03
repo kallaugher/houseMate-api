@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20161003155155) do
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.string   "type"
+    t.integer  "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,6 +41,7 @@ ActiveRecord::Schema.define(version: 20161003155155) do
     t.string   "last_name"
     t.string   "email"
     t.string   "password_digest"
+    t.integer  "group_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
