@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20161003155155) do
     t.string   "name"
     t.string   "category"
     t.integer  "group_id"
+    t.integer  "created_by"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

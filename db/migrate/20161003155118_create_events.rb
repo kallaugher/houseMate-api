@@ -4,6 +4,9 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :category
       t.integer :group_id
+      t.integer :created_by
+      t.datetime :start_time
+      t.datetime :end_time
 
       t.timestamps
     end
