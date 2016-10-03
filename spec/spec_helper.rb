@@ -1,5 +1,10 @@
+require 'rails_helper'
+require 'rspec-rails'
+
 
 RSpec.configure do |config|
+   config.include Requests::JsonHelpers, type: :api
+
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
