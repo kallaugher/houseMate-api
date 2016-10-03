@@ -1,8 +1,8 @@
 require "spec_helper"
 require 'jwt'
 
-describe Api::V1::SessionsController , :type => :api do
-  context 'when the sesssion should exist'
+describe 'Api::V1::SessionsController', :type => :api do
+  context 'when the sesssion should exist' do
     before do
      token = JWT.encode({user: User.first.id}, ENV["AUTH_SECRET_KEY"], "HS256")
       header "Authorization", "Bearer #{token}"
@@ -18,7 +18,7 @@ describe Api::V1::SessionsController , :type => :api do
     end
   end
 
-  context 'when the session should not exist'
+  context 'when the session should not exist' do
     before do
      token = JWT.encode({user: nil}, ENV["AUTH_SECRET_KEY"], "HS256")
       header "Authorization", "Bearer #{token}"
