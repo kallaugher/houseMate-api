@@ -3,13 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 
   let(:alice) {User.new(first_name: "Alice", last_name: "Kallaugher", email: "alice@gmail.com", password: "password")}
-<<<<<<< HEAD
   let!(:gentian) {User.create(first_name: "Gentian", last_name: "Bardhoshi", email: "gentian@gmail.com", password: "password", group_id: aga.id)}
-=======
-  let(:gentian) {User.new(first_name: "Gentian", last_name: "Bardhoshi", email: "gentian@gmail.com", password: "password")}
-  let(:house_party) {Event.create(id: 1, name: "Dodgeball Mayhem 2")}
-  let(:clean_bathroom) {Assignment.create(user_id: 1, event_id: 1}
->>>>>>> 44aca788a486a5c2ae8c7147c75a3c1cd0475154
 
   let(:aga) {Group.create(name: "A Good Abode")}
 
