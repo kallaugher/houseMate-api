@@ -2,10 +2,9 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   let(:alice) {User.new(first_name: "Alice", last_name: "Kallaugher", email: "alice@gmail.com", password: "password")}
-  let(:gentian) {User.new(first_name: "Gentian", last_name: "Bardhoshi", email: "gentian@gmail.com", password: "password", group_id: 1, event_id: 1)}
-  let(:aga) {Group.new(id: 1 , name: "A-Good-Abode")}
-  let(:house_party) {Event.new(id: 1, name: "Dodgeball Mayhem 2")}
-  let(:clean_bathroom) {Assignment.new(user_id: 1, event_id: 1, name: "clean bathroom")}
+  let(:gentian) {User.new(first_name: "Gentian", last_name: "Bardhoshi", email: "gentian@gmail.com", password: "password")}
+  let(:house_party) {Event.create(id: 1, name: "Dodgeball Mayhem 2")}
+  let(:clean_bathroom) {Assignment.create(user_id: 1, event_id: 1}
 
 
   it 'should be valid with a name, email and password' do
