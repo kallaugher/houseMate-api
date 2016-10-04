@@ -1,7 +1,7 @@
 module Api
   module V1
     class EventsController < ApplicationController
-      # skip_before_action :authenticate
+      skip_before_action :authenticate
 
       def index
         render json: Event.all
