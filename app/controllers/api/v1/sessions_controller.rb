@@ -3,6 +3,9 @@ module Api
     class SessionsController < ApplicationController
       skip_before_action :authenticate
 
+      def new
+      end
+
       def create
         # we had to change the line below, as there was no id in the params
         user = User.find_by(email: params[:email])
