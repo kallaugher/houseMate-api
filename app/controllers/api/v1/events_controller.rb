@@ -1,7 +1,8 @@
 module Api
   module V1
     class EventsController < ApplicationController
-      #before_action :authenticate
+      skip_before_action :authenticate
+      ##########################
 
       def create
         render json: {success: "Event successfully created"}
