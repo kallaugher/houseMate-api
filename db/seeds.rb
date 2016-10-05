@@ -70,4 +70,3 @@ tv_time = Event.create(name: "Watching the season premiere of Game of Thrones", 
 book_club = Event.create(name: "Book club meeting in the living room", category: "reservation", created_by: mary.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
 clean_kitchen = Event.create(name: "Clean kitchen", category: "chore", created_by: tony.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
 help_move = Event.create(name: "Help new roommate move in", category: "socializing", created_by: ian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-
