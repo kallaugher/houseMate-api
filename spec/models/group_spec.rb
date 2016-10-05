@@ -5,7 +5,7 @@ RSpec.describe Group, type: :model do
   let(:alex){User.create(first_name: "Alex", last_name: "Sanborn", email: "alex@gmail.com", password: "password")}
   let(:movie_night) {Event.create(name:"Movie night")}
 
-  context 'Group validations' do
+  context 'validations' do
     it 'should be valid with a name' do
       expect(headbanders).to be_valid
     end
@@ -21,7 +21,7 @@ RSpec.describe Group, type: :model do
     end
   end
 
-  context 'Group relationships' do
+  context 'relationships' do
     it 'is associated with a user' do
       headbanders.users << alex
       expect(headbanders.users).to include(alex)

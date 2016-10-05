@@ -28,20 +28,22 @@ RSpec.describe Event, type: :model do
     end
   end
 
-  it 'should belong to a group' do
-    expect(house_party.group).to eq(aga)
-  end
+  context 'relationships' do
+    it 'should belong to a group' do
+      expect(house_party.group).to eq(aga)
+    end
 
-  it 'should know if it is assigned' do
-    expect(clean_bathroom.assigned?).to eq(true)
-    expect(house_party.assigned?).to eq(false)
-  end
+    it 'should know if it is assigned' do
+      expect(clean_bathroom.assigned?).to eq(true)
+      expect(house_party.assigned?).to eq(false)
+    end
 
-  it 'should know who it is assigned to' do
-    expect(clean_bathroom.assigned_to).to include(gentian)
-  end
+    it 'should know who it is assigned to' do
+      expect(clean_bathroom.assigned_to).to include(gentian)
+    end
 
-  it 'should know who it was created by' do
-    expect(clean_bathroom.created_by).to eq(gentian.id)
+    it 'should know who it was created by' do
+      expect(clean_bathroom.created_by).to eq(gentian.id)
+    end
   end
 end

@@ -1,7 +1,11 @@
 module Api
   module V1
     class UsersController < ApplicationController
-      # skip_before_action :authenticate
+      # before_action :authenticate
+
+      def create
+       render json: {success: "User successfully created"}
+      end
 
       def index
         render json: User.all

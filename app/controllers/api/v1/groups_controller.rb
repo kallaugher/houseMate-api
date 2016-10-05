@@ -1,7 +1,10 @@
 module Api
   module V1
     class GroupsController < ApplicationController
-      skip_before_action :authenticate
+      # before_action :authenticate
+      def create
+        render json: {success: "Group successfully created"}
+      end
 
       def index
         render json: Group.all
