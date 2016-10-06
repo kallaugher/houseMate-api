@@ -4,7 +4,6 @@ module Api
       skip_before_action :authenticate
 
       def create
-        binding.pry
         event = Event.new(event_params)
         event.group_id = Group.first.id
         event.created_by = User.first.id
