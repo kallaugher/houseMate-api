@@ -27,7 +27,7 @@ module Api
       private
 
       def event_params
-        params.require(:event).permit(:name, :category, :created_by, :group_id)
+        params.require(:event).permit(:name, :category, :created_by, :group_id, :start_time, :end_time)
       end
     end
   end
