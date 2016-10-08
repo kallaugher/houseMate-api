@@ -12,4 +12,5 @@ class Event < ApplicationRecord
       a.user
     end
   end
+
 end

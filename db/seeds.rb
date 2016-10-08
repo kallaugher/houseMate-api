@@ -8,6 +8,8 @@
 Group.destroy_all
 User.destroy_all
 Event.destroy_all
+Assignment.destroy_all
+
 
 team_headband = Group.create(name: "Team Headband")
 downton_abbey = Group.create(name: "Downton Abbey")
@@ -51,20 +53,20 @@ ian = User.create(first_name: "Ian", last_name: "Candy", email: "ianc@gmail.com"
 sophie = User.create(first_name: "Sophie", last_name: "Debenedetto", email: "sophied@gmail.com", password: "password", group_id: castle.id)
 jj = User.create(first_name: "JJ", last_name: "Seymour", email: "jjs@gmail.com", password: "password", group_id: castle.id)
 
-mop = Event.create(name: "Mop the floors", category: "chore", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-housewarming = Event.create(name: "Housewarming party", category: "party", created_by: ali.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-internet_bill = Event.create(name: "Pay internet bill", category: "bill", created_by: colby.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-bowling = Event.create(name: "Roommate bowling outing", category: "socializing", created_by: charlie.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-clean_bathroom = Event.create(name: "Clean the bathroom", category: "chore", created_by: gentian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-electricity_bill = Event.create(name: "Pay electricity bill", category: "bill", created_by: andrew.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-trash = Event.create(name: "Take out trash", category: "chore", created_by: veronica.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-dinner_party = Event.create(name: "Dinner party", category: "party", created_by: jasper.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-movie_night = Event.create(name: "Movie night", category: "socializing", created_by: troy.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-brother_visit = Event.create(name: "Brother is visiting", category: "visitors", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-friend_visit = Event.create(name: "Friend is visiting", category: "visitors", created_by: khaleda.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-sister_visit = Event.create(name: "Sister is visiting", category: "visitors", created_by: abi.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-football_game = Event.create(name: "Watching the football game", category: "reservation", created_by: jason.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-tv_time = Event.create(name: "Watching the season premiere of Game of Thrones", category: "reservation")
-book_club = Event.create(name: "Book club meeting in the living room", category: "reservation", created_by: mary.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-clean_kitchen = Event.create(name: "Clean kitchen", category: "chore", created_by: tony.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
-help_move = Event.create(name: "Help new roommate move in", category: "socializing", created_by: ian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now))
+mop = Event.create(name: "Mop the floors", category: "chore", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+housewarming = Event.create(name: "Housewarming party", category: "social", created_by: ali.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: colby.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, amount: 75.00)
+bowling = Event.create(name: "Roommate bowling outing", category: "social", created_by: charlie.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+clean_bathroom = Event.create(name: "Clean the bathroom", category: "chore", created_by: gentian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: andrew.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, amount: 212.15)
+trash = Event.create(name: "Take out trash", category: "chore", created_by: veronica.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+dinner_party = Event.create(name: "Dinner party", category: "social", created_by: jasper.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+movie_night = Event.create(name: "Movie night", category: "social", created_by: troy.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+brother_visit = Event.create(name: "Brother is visiting", category: "social", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+friend_visit = Event.create(name: "Friend is visiting", category: "social", created_by: khaleda.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+sister_visit = Event.create(name: "Sister is visiting", category: "social", created_by: abi.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+football_game = Event.create(name: "Watching the football game", category: "social", created_by: jason.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+tv_time = Event.create(name: "Watching the season premiere of Game of Thrones", category: "social")
+book_club = Event.create(name: "Book club meeting in the living room", category: "social", created_by: mary.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+clean_kitchen = Event.create(name: "Clean kitchen", category: "chore", created_by: tony.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+help_move = Event.create(name: "Help new roommate move in", category: "social", created_by: ian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
