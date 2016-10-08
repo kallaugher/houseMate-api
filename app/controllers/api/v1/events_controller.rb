@@ -1,7 +1,15 @@
 module Api
   module V1
     class EventsController < ApplicationController
-      skip_before_action :authenticate
+      # skip_before_action :authenticate
+
+      def index
+        render json: Event.all
+      end
+
+      def show
+        render json: Event.find(params[:id])
+      end
 
       def create
         event = Event.new(event_params)
@@ -15,12 +23,10 @@ module Api
         end
       end
 
-      def index
+      def destroy
+        event = Event.find(params[:id])
+        event.destroy
         render json: Event.all
-      end
-
-      def show
-        render json: Event.find(params[:id])
       end
 
       private
