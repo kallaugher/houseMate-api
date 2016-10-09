@@ -3,6 +3,7 @@ class User < ApplicationRecord
   validates_presence_of :first_name, :last_name, :email, :password
   belongs_to :group, optional: true
   has_many :assignments
+  has_many :messages
 
   def full_name
     (self.first_name + ' ' + self.last_name).chomp.strip
