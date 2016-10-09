@@ -9,7 +9,7 @@
           jwt = Auth.issue({user: user.id})
           render json: {jwt: jwt}
         else
-          render json: {error: "Could not authenticate that user."}
+          # render json:
         end
       end
 
