@@ -4,7 +4,7 @@ module Api
       #  skip_before_action :authenticate
 
       def index
-        render json: Event.all
+        render json: Event.where(group_id: current_user.group_id)
       end
 
       def show
