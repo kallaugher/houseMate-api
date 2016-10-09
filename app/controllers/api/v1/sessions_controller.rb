@@ -8,7 +8,7 @@
         user = User.find_by(email: auth_params[:email])
         if user.authenticate(auth_params[:password])
           jwt = Auth.issue({user: user.id})
-          render json: {jwt: jwt}
+          render json: {jwt: jwt, current_user: user}
         else
           # render json: {"Unable to authenticate email and password, please try again."}
           # find out how json error messages are stored and test specifically for new error instead of default
