@@ -29,8 +29,10 @@ ActiveRecord::Schema.define(version: 20161003155155) do
     t.integer  "created_by"
     t.datetime "start_time"
     t.datetime "end_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.decimal  "amount",     precision: 8, scale: 3
+    t.string   "status",                             default: "pending"
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
   end
 
   create_table "groups", force: :cascade do |t|
