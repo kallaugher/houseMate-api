@@ -12,7 +12,6 @@ module Api
       end
 
       def create
-        binding.pry
         event = Event.new(event_params)
         event.group_id = current_user.group_id
         event.created_by = current_user.id
