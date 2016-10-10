@@ -45,11 +45,7 @@ module Api
       private
 
       def event_params
-<<<<<<< HEAD
-        params.require(:event).permit(:name, :category, :created_by, :group_id, :status, :end_time)
-=======
         params.require(:event).permit(:id, :name, :category, :created_by, :group_id, :status, :amount)
->>>>>>> 5fe1f461ebbe7c2bb019e3b1a6176817cc9562b8
       end
     end
   end
