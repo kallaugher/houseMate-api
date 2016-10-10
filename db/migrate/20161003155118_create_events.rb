@@ -7,7 +7,7 @@ class CreateEvents < ActiveRecord::Migration[5.0]
       t.integer :created_by
       t.datetime :start_time
       t.datetime :end_time
-      t.decimal :amount, precision: 8, scale: 3
+      t.decimal :amount, precision: 8, scale: 2
       t.string :status, default: "pending"
 
       t.timestamps
