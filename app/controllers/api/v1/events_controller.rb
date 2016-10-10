@@ -1,10 +1,10 @@
 module Api
   module V1
     class EventsController < ApplicationController
-       skip_before_action :authenticate
+      #  skip_before_action :authenticate
 
       def index
-        render json: Event.all
+        render json: Event.where(group_id: current_user.group_id)
       end
 
       def show
@@ -12,9 +12,10 @@ module Api
       end
 
       def create
+        binding.pry
         event = Event.new(event_params)
-        event.group_id = Group.first.id
-        event.created_by = User.first.id
+        event.group_id = current_user.group_id
+        event.created_by = current_user.id
 
         if event.save
           render json: event

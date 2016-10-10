@@ -25,8 +25,7 @@ module Api
       private
 
       def token
-        request.env["HTTP_AUTHORIZATION"].scan(/Bearer
-          (.*)$/).flatten.last
+        request.env["HTTP_AUTHORIZATION"].scan(/Bearer (.*)$/).flatten.last
       end
 
       def auth
