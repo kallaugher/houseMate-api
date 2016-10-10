@@ -46,7 +46,7 @@ ian = User.create(first_name: "Ian", last_name: "Candy", email: "ianc@gmail.com"
 sophie = User.create(first_name: "Sophie", last_name: "Debenedetto", email: "sophied@gmail.com", password: "password", group_id: castle.id)
 jj = User.create(first_name: "JJ", last_name: "Seymour", email: "jjs@gmail.com", password: "password", group_id: castle.id)
 
-mop = Event.create(name: "Mop the floors", category: "chore", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+mop = Event.create(name: "Mop the floors", category: "chore", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, status: 'complete')
 housewarming = Event.create(name: "Housewarming party", category: "social", created_by: ali.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
 
 internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: colby.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, amount: 75.00)

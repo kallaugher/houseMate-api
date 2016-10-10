@@ -23,6 +23,16 @@ module Api
         end
       end
 
+      def update
+        event = Event.find(params[:id])
+
+        event.update(event_params)
+      #  binding.pry
+        event.group_id = Group.first.id
+        event.created_by = User.first.id
+        render json: event
+      end
+
       def destroy
         event = Event.find(params[:id])
         event.destroy
@@ -31,7 +41,7 @@ module Api
       private
 
       def event_params
-        params.require(:event).permit(:name, :category, :created_by, :group_id)
+        params.require(:event).permit(:name, :category, :created_by, :group_id, :status, :end_time)
       end
     end
   end
