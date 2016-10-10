@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20161009025145) do
     t.integer  "created_by"
     t.datetime "start_time"
     t.datetime "end_time"
-    t.decimal  "amount",     precision: 8, scale: 3
+    t.decimal  "amount",     precision: 8, scale: 2
     t.string   "status",                             default: "pending"
     t.datetime "created_at",                                             null: false
     t.datetime "updated_at",                                             null: false
