@@ -10,10 +10,7 @@
           jwt = Auth.issue({user: user.id})
           render json: {jwt: jwt, current_user: user}
         else
-          # render json: {"Unable to authenticate email and password, please try again."}
-          # find out how json error messages are stored and test specifically for new error instead of default
-
-          # render json:
+          render json: user.errors, status: 404
         end
       end
 
