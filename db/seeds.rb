@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+.# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -53,11 +53,11 @@ ian = User.create(first_name: "Ian", last_name: "Candy", email: "ianc@gmail.com"
 sophie = User.create(first_name: "Sophie", last_name: "Debenedetto", email: "sophied@gmail.com", password: "password", group_id: castle.id)
 jj = User.create(first_name: "JJ", last_name: "Seymour", email: "jjs@gmail.com", password: "password", group_id: castle.id)
 
-mop = Event.create(name: "Mop the floors", category: "chore", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+mop = Event.create(name: "Mop the floors", category: "chore", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, status: 'complete')
 housewarming = Event.create(name: "Housewarming party", category: "social", created_by: ali.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
 internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: colby.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, amount: 75.00)
 bowling = Event.create(name: "Roommate bowling outing", category: "social", created_by: charlie.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
-clean_bathroom = Event.create(name: "Clean the bathroom", category: "chore", created_by: gentian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+clean_bathroom = Event.create(name: "Clean the bathroom", category: "chore", created_by: gentian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, status: 'complete')
 electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: andrew.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, amount: 212.15)
 trash = Event.create(name: "Take out trash", category: "chore", created_by: veronica.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
 dinner_party = Event.create(name: "Dinner party", category: "social", created_by: jasper.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
