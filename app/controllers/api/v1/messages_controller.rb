@@ -1,7 +1,7 @@
 module Api
   module V1
-    class MessagessController < ApplicationController
-      #  skip_before_action :authenticate
+    class MessagesController < ApplicationController
+      # skip_before_action :authenticate
 
       def index
         render json: Message.where(group_id: current_user.group_id)
