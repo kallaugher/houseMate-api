@@ -51,7 +51,7 @@ housewarming = Event.create(name: "Housewarming party", category: "social", crea
 
 internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: colby.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, amount: 75.00)
 bowling = Event.create(name: "Roommate bowling outing", category: "social", created_by: charlie.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
-clean_bathroom = Event.create(name: "Clean the bathroom", category: "chore", created_by: gentian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+clean_bathroom = Event.create(name: "Clean the bathroom", category: "chore", created_by: gentian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, status: 'complete')
 electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: andrew.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, amount: 212.15)
 
 trash = Event.create(name: "Take out trash", category: "chore", created_by: veronica.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
