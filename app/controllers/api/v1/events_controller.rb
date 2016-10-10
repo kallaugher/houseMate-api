@@ -1,11 +1,7 @@
 module Api
   module V1
     class EventsController < ApplicationController
-<<<<<<< HEAD
       # skip_before_action :authenticate
-=======
-      #  skip_before_action :authenticate
->>>>>>> 4a407ef6d6b3731db908741d14b3e72c15de9eeb
 
       def index
         render json: Event.where(group_id: current_user.group_id)
