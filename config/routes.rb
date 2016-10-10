@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :users
       resources :groups
       resources :events
+      resources :messages
     end
   end
 end

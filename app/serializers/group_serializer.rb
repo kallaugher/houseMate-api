@@ -1,3 +1,3 @@
 class GroupSerializer < ActiveModel::Serializer
-  attributes :name
+  attributes :id, :name
 end
