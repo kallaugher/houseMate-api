@@ -14,9 +14,9 @@ module Api
       def create
         message = Message.new(message_params)
         message.group_id = current_user.group_id
-        event.user_id = current_user.id
+        message.user_id = current_user.id
 
-        if event.save
+        if message.save
           render json: message
         else
           render json: message.errors, status: 500
