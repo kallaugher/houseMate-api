@@ -1,9 +1,4 @@
 class EventSerializer < ActiveModel::Serializer
-  attributes :id, :name, :category, :assigned_to, :created_by, :end_time, :start_time
-
-#   {events: [
-#   {id: 1, category: "chore", description: "dishes", assigned_to: 1, created_by: 8}
-#   ]
-# ]}
+  attributes :id, :name, :category, :assigned_to, :created_by, :end_time, :start_time, :status, :amount
 
 end
