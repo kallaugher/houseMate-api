@@ -14,6 +14,7 @@ ravenclaw = Group.create(name: "Ravenclaw")
 hufflepuff = Group.create(name: "Hufflepuff")
 slytherin = Group.create(name: "Slytherin")
 castle = Group.create(name: "The Castle")
+example_group = Group.create(name: "Example Team")
 
 
 alex = User.create(first_name: "Alex", last_name: "Sanborn", email: "alex_s@gmail.com", password: "password", group_id: team_headband.id)
@@ -65,6 +66,7 @@ book_club = Event.create(name: "Book club meeting in the living room", category:
 
 help_move = Event.create(name: "Help new roommate move in", category: "social", created_by: ian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
 
+<<<<<<< HEAD
 #chores
 trash = Event.create(name: "Take out trash", category: "chore", created_by: alice.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
 Assignment.create(user_id: alice.id, event_id: trash.id)
@@ -83,3 +85,7 @@ Assignment.create(user_id: alice.id, event_id: grocery_shopping.id)
 
 fire_alarm = Event.create(name: "check fire alarm battery", category: "chore", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
 Assignment.create(user_id: alex.id, event_id: fire_alarm.id)
+=======
+demo_group = Group.create(name: "Demo Team")
+demo_user = User.create(first_name: "Demo", last_name: "User", email: "demo@email.com", password: "demo", group_id: demo_group.id)
+>>>>>>> 2df3db2e93feafd8622404e0cbb2da59d9a979a8
