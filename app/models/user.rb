@@ -18,9 +18,7 @@ class User < ApplicationRecord
   end
 
   def assigned_events
-    self.assignments.map do |a|
-      a.event
-    end
+    self.assignments.map {|a| a.event}.compact
   end
 
   def assigned_chores
