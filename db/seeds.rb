@@ -14,6 +14,7 @@ ravenclaw = Group.create(name: "Ravenclaw")
 hufflepuff = Group.create(name: "Hufflepuff")
 slytherin = Group.create(name: "Slytherin")
 castle = Group.create(name: "The Castle")
+example_group = Group.create(name: "Example Team")
 
 
 alex = User.create(first_name: "Alex", last_name: "Sanborn", email: "alex_s@gmail.com", password: "password", group_id: team_headband.id)
@@ -65,3 +66,6 @@ tv_time = Event.create(name: "Watching the season premiere of Game of Thrones", 
 book_club = Event.create(name: "Book club meeting in the living room", category: "social", created_by: mary.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
 clean_kitchen = Event.create(name: "Clean kitchen", category: "chore", created_by: tony.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
 help_move = Event.create(name: "Help new roommate move in", category: "social", created_by: ian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
+
+demo_group = Group.create(name: "Demo Team")
+demo_user = User.create(first_name: "Demo", last_name: "User", email: "demo@email.com", password: "demo", group_id: demo_group.id)
