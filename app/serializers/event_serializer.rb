@@ -1,4 +1,3 @@
 class EventSerializer < ActiveModel::Serializer
-  attributes :id, :name, :category, :assigned_to, :created_by, :end_time, :start_time, :status, :amount
-
+  attributes :id, :name, :category, :created_by, :end_time, :start_time, :status, :amount
 end
