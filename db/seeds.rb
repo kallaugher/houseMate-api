@@ -74,7 +74,12 @@ Assignment.create(user_id: alex.id, event_id: mop.id)
 clean_bathroom = Event.create(name: "Clean the bathroom", category: "chore", created_by: gentian.id, end_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
 Assignment.create(user_id: gentian.id, event_id: clean_bathroom.id)
 
+<<<<<<< HEAD
 clean_kitchen = Event.create(name: "Clean kitchen", category: "chore", created_by: alex.id, end_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
+=======
+clean_kitchen = Event.create(name: "Clean kitchen", category: "chore", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
+Assignment.create(user_id: gentian.id, event_id: clean_kitchen.id)
+>>>>>>> 7c10a8549d63a09741771b8f40e1cba47fd2c6f9
 
 grocery_shopping = Event.create(name: "Grocery shopping", category: "chore", created_by: alice.id, end_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
 Assignment.create(user_id: alice.id, event_id: grocery_shopping.id)

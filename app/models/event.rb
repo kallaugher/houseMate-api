@@ -3,13 +3,14 @@ class Event < ApplicationRecord
   has_many :assignments
   validates_presence_of :name, :category, :created_by
 
+
   def assigned?
     !self.assignments.empty?
   end
 
   def assigned_to
     self.assignments.map do |a|
-      a.user.first_name
+      a.user
     end
   end
 
@@ -19,5 +20,6 @@ class Event < ApplicationRecord
 
   def year
     self.end_time.strftime("%Y")
+
   end
 end

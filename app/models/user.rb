@@ -9,7 +9,7 @@ class User < ApplicationRecord
     (self.first_name + ' ' + self.last_name).strip
   end
 
-  def get_initials
+  def initials
     (self.first_name[0] + self.last_name[0]).upcase
   end
 
