@@ -14,7 +14,12 @@ class Event < ApplicationRecord
     end
   end
 
-  def assigned_to=(assigned_to)
-    self.assignments << Assignment.create(user_id: User.find(assigned_to.id).id, event_id: self.id)
+  def month
+    self.end_time.strftime("%b")
+  end
+
+  def year
+    self.end_time.strftime("%Y")
+
   end
 end
