@@ -15,6 +15,6 @@ class Event < ApplicationRecord
   end
 
   def assigned_to=(assigned_to)
-    self.assignments << Assignment.create(user_id: User.find(assigned_to.id), event_id: self.id)
+    self.assignments << Assignment.create(user_id: User.find(assigned_to.id).id, event_id: self.id)
   end
 end
