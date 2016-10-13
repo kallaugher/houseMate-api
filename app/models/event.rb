@@ -9,7 +9,7 @@ class Event < ApplicationRecord
 
   def assigned_to
     self.assignments.map do |a|
-      a.user.id
+      a.user.first_name
     end
   end
 end
