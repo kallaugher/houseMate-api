@@ -49,10 +49,8 @@ jj = User.create(first_name: "JJ", last_name: "Seymour", email: "jjs@gmail.com",
 
 housewarming = Event.create(name: "Housewarming party", category: "social", created_by: ali.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
 
-internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: colby.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, amount: 75.00)
-bowling = Event.create(name: "Roommate bowling outing", category: "social", created_by: charlie.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
 
-electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: andrew.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id, amount: 212.15)
+bowling = Event.create(name: "Roommate bowling outing", category: "social", created_by: charlie.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
 
 # social events
 dinner_party = Event.create(name: "Dinner party", category: "social", created_by: jasper.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
@@ -67,21 +65,36 @@ book_club = Event.create(name: "Book club meeting in the living room", category:
 help_move = Event.create(name: "Help new roommate move in", category: "social", created_by: ian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), end_time: Faker::Time.between(DateTime.now - 1, DateTime.now), group_id: team_headband.id)
 
 #chores
-trash = Event.create(name: "Take out trash", category: "chore", created_by: alice.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
+trash = Event.create(name: "Take out trash", category: "chore", created_by: alice.id, end_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
 Assignment.create(user_id: alice.id, event_id: trash.id)
 
-mop = Event.create(name: "Mop the floors", category: "chore", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
+mop = Event.create(name: "Mop the floors", category: "chore", created_by: alex.id, end_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
 Assignment.create(user_id: alex.id, event_id: mop.id)
 
-clean_bathroom = Event.create(name: "Clean the bathroom", category: "chore", created_by: gentian.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
+clean_bathroom = Event.create(name: "Clean the bathroom", category: "chore", created_by: gentian.id, end_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
 Assignment.create(user_id: gentian.id, event_id: clean_bathroom.id)
 
-clean_kitchen = Event.create(name: "Clean kitchen", category: "chore", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
+clean_kitchen = Event.create(name: "Clean kitchen", category: "chore", created_by: alex.id, end_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
 
-grocery_shopping = Event.create(name: "Grocery shopping", category: "chore", created_by: alice.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
+grocery_shopping = Event.create(name: "Grocery shopping", category: "chore", created_by: alice.id, end_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
 Assignment.create(user_id: alice.id, event_id: grocery_shopping.id)
 
-fire_alarm = Event.create(name: "check fire alarm battery", category: "chore", created_by: alex.id, start_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
+fire_alarm = Event.create(name: "check fire alarm battery", category: "chore", created_by: alex.id, end_time: Faker::Time.between(DateTime.now - 1, DateTime.now + 12), group_id: team_headband.id)
 Assignment.create(user_id: alex.id, event_id: fire_alarm.id)
+
 demo_group = Group.create(name: "Demo Team")
 demo_user = User.create(first_name: "Demo", last_name: "User", email: "demo@email.com", password: "demo", group_id: demo_group.id)
+
+# bills
+# 2015
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,1,1), group_id: team_headband.id, amount: 75.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,1,1), group_id: team_headband.id, amount: 100.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,1,1), group_id: team_headband.id, amount: 90.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,2,1), group_id: team_headband.id, amount: 60.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,2,1), group_id: team_headband.id, amount: 90.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,2,1), group_id: team_headband.id, amount: 100.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,3,1), group_id: team_headband.id, amount: 70.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,3,1), group_id: team_headband.id, amount: 95.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,3,1), group_id: team_headband.id, amount: 100.55)

@@ -12,4 +12,12 @@ class Event < ApplicationRecord
       a.user.first_name
     end
   end
+
+  def month
+    self.end_time.strftime("%b")
+  end
+
+  def year
+    self.end_time.strftime("%Y")
+  end
 end
