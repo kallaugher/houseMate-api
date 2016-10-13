@@ -18,8 +18,15 @@ class User < ApplicationRecord
   end
 
   def assigned_events
-    self.assignments.map do |a|
-      a.event
-    end
+    self.assignments.map {|a| a.event}.compact
+  end
+
+  def assigned_chores
+    self.assigned_events.select{|event| event.category == "chore"}
+  end
+
+  def current_month_assigned_chores
+    current_month = DateTime.now.strftime("%b")
+    self.assigned_chores.select{|c| c.start_time.strftime("%b") == current_month}
   end
 end

@@ -4,7 +4,8 @@ module Api
       # skip_before_action :authenticate
 
       def index
-        render json: Message.where(group_id: current_user.group_id)
+        messages = Message.where(group_id: current_user.group_id).reverse
+        render json: messages
       end
 
       def show
