@@ -98,3 +98,89 @@ water_bill = Event.create(name: "Water bill", category: "bill", created_by: alic
 internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,3,1), group_id: team_headband.id, amount: 70.25)
 electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,3,1), group_id: team_headband.id, amount: 95.35)
 water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,3,1), group_id: team_headband.id, amount: 100.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,4,1), group_id: team_headband.id, amount: 85.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,4,1), group_id: team_headband.id, amount: 100.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,4,1), group_id: team_headband.id, amount: 120.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,5,1), group_id: team_headband.id, amount: 85.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,5,1), group_id: team_headband.id, amount: 130.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,5,1), group_id: team_headband.id, amount: 120.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,6,1), group_id: team_headband.id, amount: 85.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,6,1), group_id: team_headband.id, amount: 110.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,6,1), group_id: team_headband.id, amount: 120.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,7,1), group_id: team_headband.id, amount: 105.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,7,1), group_id: team_headband.id, amount: 110.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,7,1), group_id: team_headband.id, amount: 120.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,8,1), group_id: team_headband.id, amount: 90.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,8,1), group_id: team_headband.id, amount: 90.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,8,1), group_id: team_headband.id, amount: 120.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,9,1), group_id: team_headband.id, amount: 90.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,9,1), group_id: team_headband.id, amount: 90.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,9,1), group_id: team_headband.id, amount: 70.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,10,1), group_id: team_headband.id, amount: 80.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,10,1), group_id: team_headband.id, amount: 90.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,10,1), group_id: team_headband.id, amount: 70.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,11,1), group_id: team_headband.id, amount: 80.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,11,1), group_id: team_headband.id, amount: 50.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,11,1), group_id: team_headband.id, amount: 70.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,12,1), group_id: team_headband.id, amount: 90.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,12,1), group_id: team_headband.id, amount: 70.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,12,1), group_id: team_headband.id, amount: 70.55)
+
+# 2016 bills
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,1,1), group_id: team_headband.id, amount: 75.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,1,1), group_id: team_headband.id, amount: 100.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,1,1), group_id: team_headband.id, amount: 90.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,2,1), group_id: team_headband.id, amount: 60.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,2,1), group_id: team_headband.id, amount: 90.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,2,1), group_id: team_headband.id, amount: 100.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,3,1), group_id: team_headband.id, amount: 70.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,3,1), group_id: team_headband.id, amount: 95.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,3,1), group_id: team_headband.id, amount: 100.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,4,1), group_id: team_headband.id, amount: 85.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,4,1), group_id: team_headband.id, amount: 100.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,4,1), group_id: team_headband.id, amount: 120.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,5,1), group_id: team_headband.id, amount: 85.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,5,1), group_id: team_headband.id, amount: 130.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,5,1), group_id: team_headband.id, amount: 120.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,6,1), group_id: team_headband.id, amount: 85.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,6,1), group_id: team_headband.id, amount: 110.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,6,1), group_id: team_headband.id, amount: 120.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,7,1), group_id: team_headband.id, amount: 105.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,7,1), group_id: team_headband.id, amount: 110.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,7,1), group_id: team_headband.id, amount: 120.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,8,1), group_id: team_headband.id, amount: 90.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,8,1), group_id: team_headband.id, amount: 90.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,8,1), group_id: team_headband.id, amount: 120.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,9,1), group_id: team_headband.id, amount: 90.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,9,1), group_id: team_headband.id, amount: 90.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,9,1), group_id: team_headband.id, amount: 70.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,10,1), group_id: team_headband.id, amount: 80.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,10,1), group_id: team_headband.id, amount: 90.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2016,10,1), group_id: team_headband.id, amount: 70.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,11,1), group_id: team_headband.id, amount: 80.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,11,1), group_id: team_headband.id, amount: 50.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,11,1), group_id: team_headband.id, amount: 70.55)
+
+internet_bill = Event.create(name: "Internet bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,12,1), group_id: team_headband.id, amount: 90.25)
+electricity_bill = Event.create(name: "Electricity bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,12,1), group_id: team_headband.id, amount: 70.35)
+water_bill = Event.create(name: "Water bill", category: "bill", created_by: alice.id, end_time: DateTime.new(2015,12,1), group_id: team_headband.id, amount: 70.55)
