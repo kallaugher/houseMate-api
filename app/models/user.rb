@@ -26,6 +26,7 @@ class User < ApplicationRecord
   end
 
   def current_month_assigned_chores
+    binding.pry
     current_month = DateTime.now.strftime("%b")
     self.assigned_chores.select{|c| c.end_time.strftime("%b") == current_month}
   end
