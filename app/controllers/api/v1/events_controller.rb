@@ -15,6 +15,7 @@ module Api
         event = Event.new
         event.name = event_params["name"]
         event.category = event_params["category"]
+        event.start_time = event_params["start_time"]
         event.end_time = event_params["end_time"]
         event.group_id = current_user.group_id
         event.created_by = current_user.id
