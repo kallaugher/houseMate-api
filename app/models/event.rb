@@ -15,7 +15,7 @@ class Event < ApplicationRecord
   end
 
   def month
-    self.end_time.strftime("%b")
+    self.end_time.strftime("%m")
   end
 
   def year
