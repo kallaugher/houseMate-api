@@ -12,13 +12,19 @@ module Api
       end
 
       def create
-        #binding.pry
-        event = Event.new(event_params)
+        event = Event.new
+        event.name = event_params["name"]
+        event.category = event_params["category"]
+        event.end_time = event_params["end_time"]
         event.group_id = current_user.group_id
         event.created_by = current_user.id
-        event.assigned_to =
+        event.save
 
-        if event.save
+        if event_params["assigned_to"]
+          Assignment.create(event_id: event.id, user_id: event_params["assigned_to"])
+        end
+
+        if event.id
           render json: event
         else
           render json: event.errors, status: 500
@@ -48,7 +54,7 @@ module Api
       private
 
       def event_params
-        params.require(:event).permit(:name, :category, :created_by, :group_id, :start_time, :end_time, :status, :amount, assigned_to: [:user])
+        params.require(:event).permit(:name, :category, :created_by, :group_id, :start_time, :end_time, :status, :amount, :assigned_to)
       end
     end
   end
